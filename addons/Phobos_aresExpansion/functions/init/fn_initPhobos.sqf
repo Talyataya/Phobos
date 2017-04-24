@@ -1,0 +1,22 @@
+
+//Check if dedicated server
+if(!hasInterface) exitWith {["Dedicated Server detected, aborting Phobos initialization."] call Phobos_fnc_LogMessage;};
+[] call Phobos_fnc_initGlobalVariables; //Temporary function, serves as a list for a future feature.
+	
+//Wait till player is zeus.
+[] spawn {
+	[] call Ares_fnc_waitForZeus;
+	while { not ([player] call Ares_fnc_isZeus) } do
+	{
+		sleep 1;
+	};
+	
+	["Initializing Phobos UI."] call Phobos_fnc_logMessage;
+	["Phobos"] spawn Phobos_fnc_MonitorCuratorDisplay;
+	["UI Initialized."] call Phobos_fnc_logMessage;
+	
+	Phobos_selectedObjects=[];
+	_curatorLogic = getAssignedCuratorLogic player;
+	_curatorLogic addEventHandler ["CuratorObjectSelectionChanged", "if (not (curatorSelected select 0 isEqualTo [] || side (_this select 1) == sideLogic)) then { Phobos_selectedObjects=curatorSelected select 0;}"];
+};
+

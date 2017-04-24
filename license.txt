@@ -1,0 +1,17 @@
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+Phobos integrates code from the following mods or scripts:
+	* Ares Mod (by Anton Struyk)
+		https://github.com/astruyk/Ares
+		
+Phobos includes contributions by the following coders:
+	* Talya
+	* Kex (General indirect assistance)
+	
+Phobos includes contributions by the following closed-beta testers:
+	* Eathox
+	* Kilian
+	* Hannes
+
+	
+Phobos is provided without warranty. Use at your own risk.
