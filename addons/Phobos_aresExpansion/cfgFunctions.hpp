@@ -18,15 +18,18 @@ class Phobos
             class logMessage;
             class initGlobalVariables;
 			class getParentMod;
+			class showChooseDialog;
+			class getChangelog;
       };
       
       class ui
       {
             file = "\Phobos_aresExpansion\ui\functions";
             class welcomeScreen {};
-            class whatIsNew {};
             class initMenu {};
 			class welcomeScreenFnc {};
+			class displayChangelog {};
+			class displayChangelogFnc {};
       };
                
       #include "cfgFunctionsAIBehaviour.hpp"
@@ -40,5 +43,6 @@ class Phobos
       #include "cfgFunctionsObjectPositioning.hpp"
       #include "cfgFunctionsPrefixes.hpp"
       #include "cfgFunctionsRoleplay.hpp"
+      #include "cfgFunctionsSaveMission.hpp"
       #include "cfgFunctionsSideRelations.hpp"
 };

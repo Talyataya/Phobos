@@ -1,14 +1,14 @@
-class WelcomeScreen
+class ChangelogDialog
 {
-	idd = 340100;
-	onLoad = "_this call compile preprocessfilelinenumbers '\Phobos_aresExpansion\ui\functions\fn_welcomeScreen.sqf'";
+	idd = 340101;
+	onLoad = "_this call compile preprocessfilelinenumbers '\Phobos_aresExpansion\ui\functions\fn_displayChangelog.sqf'";
 	movingEnable = false;
 	class controls 
 	{
 		class RscButtonMenuOK_2600: RscButtonMenuOK
 		{
 			idc = 2600;
-			onMouseButtonClick = "[] call compile preprocessFileLineNumbers '\Phobos_aresExpansion\ui\functions\fn_welcomeScreenFnc.sqf'";
+			onMouseButtonClick = "[] call compile preprocessFileLineNumbers '\Phobos_aresExpansion\ui\functions\fn_displayChangelogFnc.sqf'";
 			soundClick[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundClick",0.1,1};
 			soundEnter[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEnter",0.1,1};
 			soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.1,1};

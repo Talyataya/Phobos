@@ -25,3 +25,12 @@ class Phobos_Module_DeveloperTools_assignName4 : Phobos_DeveloperTools_Module_Ba
       displayName = "Assign Name: object4";
       function = "Phobos_fnc_assignName4";
 };
+
+class Phobos_Module_DeveloperTools_editObjectVariables : Phobos_DeveloperTools_Module_Base
+{
+      scopeCurator = 2;
+      displayName = "Display/Modify Object Variables";
+      function = "Phobos_fnc_editObjectVariables";
+};
+      
+      

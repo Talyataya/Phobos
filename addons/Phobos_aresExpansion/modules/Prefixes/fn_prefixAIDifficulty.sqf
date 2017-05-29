@@ -1,16 +1,17 @@
 //////////////////////////////////////////////////////////////
 //
 // Author: Talya
-// Version: 1.0
+// Version: 1.1
 // Description: Changes placed units' difficulty.(Only for units placed after this module is used.)
-// Changelog: None
+// Changelog: 
+// v1.1: 
+//		* Fixed: Wrong variable was being checked to delete previous removeEventHandler, if existed.
 //
 //////////////////////////////////////////////////////////////
-
 #include "\Phobos_aresExpansion\module_header.hpp"
 
 _zeusLogic = getAssignedCuratorLogic player;
-if (not (isNil "customAIDifficultyEHIndex")) then 
+if (not (isNil "Phobos_customAIDifficultyEHIndex")) then 
 {	
 	_zeusLogic removeEventHandler ["CuratorObjectPlaced",Phobos_customAIDifficultyEHIndex];
 };
