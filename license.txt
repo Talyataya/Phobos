@@ -3,8 +3,6 @@ This work is licensed under the Creative Commons Attribution-NonCommercial-Share
 Phobos integrates code from the following mods or scripts:
 	* Ares Mod (by Anton Struyk)
 		https://github.com/astruyk/Ares
-	* Kronzky's String manipulation functions
-		http://kronzky.info/snippets/strings/index.htm
 		
 Phobos includes contributions by the following coders:
 	* Talya

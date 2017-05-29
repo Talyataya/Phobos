@@ -5,5 +5,4 @@ class DeveloperToolModules
       class assignName2 {};
       class assignName3 {};
       class assignName4 {};
-      class editObjectVariables {};
 };

@@ -29,7 +29,7 @@ class WelcomeScreen
 			h = 0.02625 * safezoneH;
 		};
 		
-		class StructuredTextControlGroup : RscControlsGroupNoHScrollbars
+		class StructuredTextControlGroup : RscControlsGroup 
 		{	
 			idc = -1;
 			x = 0.2025 * safezoneW + safezoneX;
@@ -40,14 +40,14 @@ class WelcomeScreen
 			{
 				class RscStructuredText_1100: RscStructuredText
 				{
-					idc = 1100;
-					colorBackground[] = { 0, 0, 0, 0 };
-					size = ((((GUI_GRID_W / GUI_GRID_H ) min 1.2) / 1.2) / 25) / (getResolution select 5);
-					lineSpacing = 1;
-					x = 0;
-					y = 0;
-					w = 0.56 * safezoneW;
-					h = 0.3675 * safezoneH;
+				idc = 1100;
+				colorBackground[] = { 0, 0, 0, 0 };
+				size = ((((GUI_GRID_W / GUI_GRID_H ) min 1.2) / 1.2) / 25) / (getResolution select 5);
+				lineSpacing = 1;
+				x = 0;
+				y = 0;
+				w = 0.56 * safezoneW;
+				h = 0.3675 * safezoneH;
 				};
 			};
 		};

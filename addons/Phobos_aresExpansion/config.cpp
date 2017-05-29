@@ -6,9 +6,9 @@ class CfgPatches
                        name="Phobos";
                        author[]={"Talya"};
                        url ="";
-                       version = 0.5.2;
-                       versionStr = "0.5.2";
-                       versionAr[] ={0,5,2};
+                       version = 0.5.0;
+                       versionStr = "0.5.0";
+                       versionAr[] ={0,5,0};
                        requiredVersion = 0.1;
                        #include "units.hpp"
                        requiredAddons[] =
@@ -78,7 +78,7 @@ class CfgVehicles
       
       class Phobos_ObjectPositioning_Module_Base : Phobos_Module_Base
       {
-            subCategory = "Object Position (±0.05)";
+            subCategory = "Object Position (ï¿½0.05)";
       };
       
       class Phobos_Prefixes_Module_Base : Phobos_Module_Base
@@ -91,11 +91,6 @@ class CfgVehicles
             subCategory = "Roleplay";
       };
       
-      class Phobos_SaveMission_Module_Base : Phobos_Module_Base
-      {
-            subCategory = "Phobos Save/Load";
-      };
-            
       class Phobos_SideRelations_Module_Base : Phobos_Module_Base
       {
             subCategory = "Diplomacy";
@@ -112,7 +107,6 @@ class CfgVehicles
       #include "cfgVehiclesObjectPositioning.hpp"
       #include "cfgVehiclesPrefixes.hpp"
       #include "cfgVehiclesRoleplay.hpp"
-      #include "cfgVehiclesSaveMission.hpp"
       #include "cfgVehiclesSideRelations.hpp"
 };        
 
@@ -128,11 +122,11 @@ class cfgFunctions
 #include "ui\baseDialogs.hpp"
 #include "ui\welcomeDialog.hpp"
 #include "ui\shutdownDialog.hpp"
-#include "ui\dynamicDialog.hpp"
-#include "ui\changelogDialog.hpp"
 
 class RscStandardDisplay;
 class RscDisplayMain : RscStandardDisplay
 {
       onLoad = "_this call compile preprocessfilelinenumbers '\Phobos_aresExpansion\ui\functions\fn_initMenu.sqf'";
 };
+      
+

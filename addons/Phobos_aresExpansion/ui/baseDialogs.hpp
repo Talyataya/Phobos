@@ -114,9 +114,6 @@ class RscStructuredText;
 class RscBackgroundGUI;
 class RscSlider;
 class RscControlsGroup;
-class RscControlsGroupNoScrollbars;
-class RscControlsGroupNoHScrollbars;
-class RscControlsGroupNoVScrollbars;
 class RscDynamicDialogSlider : RscSlider {
 	idc = -1;
 	style = "0x400 + 0x10";
