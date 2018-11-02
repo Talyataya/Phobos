@@ -37,7 +37,7 @@ _deleteModuleOnExit = true;
 	// HACK - Some modules seem to fire twice. This way we don't get a race condition where they
 	// are both executing their code. Assume the REAL module logic will cleanup the module if
 	// necessary.
-	if (_logic getVariable ["ares_hasRunModuleLogicAlready", false]) then { _deleteModuleOnExit = false; breakTo MAIN_SCOPE_NAME; };
-	_logic setVariable ["ares_hasRunModuleLogicAlready", true];
+	if (_logic getVariable ["Phobos_hasRunModuleLogicAlready", false]) then { _deleteModuleOnExit = false; breakTo MAIN_SCOPE_NAME; };
+	_logic setVariable ["Phobos_hasRunModuleLogicAlready", true];
 	
 	// The code inside the module will actually run here...

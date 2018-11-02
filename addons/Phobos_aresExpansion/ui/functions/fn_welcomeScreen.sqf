@@ -26,15 +26,23 @@ _message = _message + _bullet + "Extra features for roleplay missions.<br />";
 _message = _message + _bullet + "Ambience related features to <t color ='" + _colorHighlightHTML + "'>prevent</t> your worshippers from <t color ='" + _colorHighlightHTML + "'>feeling lonely</t>.<br />";
 _message = _message + _bullet + "Animations.<br />";
 _message = _message + _bullet + "And many more that awaits for your <t color ='" + _colorHighlightHTML + "'>exploration</t>.<br /><br />";
+
+_message = _message + "This mod contains a Field-Manual for introduced features. It is suggested to read those entries to have maximum benefit from provided features.<br />";
+
+_message = _message + "<br />";
+
 _message = _message + "If you like what is going on with this mod, feel free to contribute to it by proposing your ideas or report any issues you have on: <br /><t href='https://github.com/Talyataya/Phobos/issues'>GitHub Link</t>";
 
 _textField ctrlSetStructuredText (parseText _message);
 _title ctrlSetStructuredText (parseText "Phobos");
 _title ctrlSetBackgroundColor _colorHighlightRGB;
+[_textField] call compile preprocessFileLineNumbers "A3\functions_f\gui\fn_ctrlFitToTextHeight.sqf";
 _textField ctrlCommit 0; 
 _title ctrlCommit 0;
 
 //["onLoad",_this,"RscDisplayMain","GUI"] call compile preprocessFileLineNumbers "A3\ui_f\scripts\initDisplay.sqf";
+
+
 /*
 Welcome and thanks for downloading and taking part in Beta Version of Phobos. In this mod, you'll have new features varied from new module types to different functionalities.
 

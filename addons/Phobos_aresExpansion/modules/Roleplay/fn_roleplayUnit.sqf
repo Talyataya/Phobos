@@ -22,7 +22,7 @@ if (not (isNull _unitUnderCursor)) then
 					[_nameOfSelectedUnit + " says:" , ""],
 					["Chat Type:", ["Global Chat", "Side Chat", "Command Chat", "Group Chat", "Vehicle Chat", "System Chat"]]
 				]
-			] call ares_fnc_showChooseDialog;
+			] call Phobos_fnc_showChooseDialog;
 			
 		if (count _chatResult > 0) then {
 			_saidContent= _chatResult select 0; 

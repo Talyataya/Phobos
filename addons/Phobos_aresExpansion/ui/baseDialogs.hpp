@@ -108,16 +108,21 @@ class RscEdit;
 class RscText;
 class RscCombo;
 class RscMessageBox;
+class RscButton;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
 class RscStructuredText;
 class RscBackgroundGUI;
 class RscSlider;
+class RscXSliderH;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class RscControlsGroupNoHScrollbars;
 class RscControlsGroupNoVScrollbars;
-class RscDynamicDialogSlider : RscSlider {
+class RscActivePicture;
+
+// Custom base classes.
+class RscDynamicDialogSlider : RscSlider { //Obsolete
 	idc = -1;
 	style = "0x400 + 0x10";
 	type = 43;
@@ -129,5 +134,26 @@ class RscDynamicDialogSlider : RscSlider {
 	arrowFull = "\A3\ui_f\data\gui\cfg\slider\arrowFull_ca.paa";
 	border = "\A3\ui_f\data\gui\cfg\slider\border_ca.paa";
 	thumb = "\A3\ui_f\data\gui\cfg\slider\thumb_ca.paa";
+};
+class RscDynamicDialogSliderH : RscXSliderH {
+	idc = -1;
+	color[] = {1,1,1,1};
+	colorActive[] = {1,1,1,1};
+	arrowEmpty = "\A3\ui_f\data\gui\cfg\slider\arrowEmpty_ca.paa";
+	arrowFull = "\A3\ui_f\data\gui\cfg\slider\arrowFull_ca.paa";
+	border = "#(argb,8,8,3)color(0,0,0,0.4)";
+	thumb = "#(argb,8,8,3)color(1,1,1,0.4)";
+};
+class RscDynamicDialogSliderText : RscText {
+	idc = -1;
+	colorText[]={1,1,1,1};
+	style = ST_CENTER;
+	shadow = 1;
+};
+class RscDynamicDialogScriptBox : RscEdit {
+	idc = -1;
+	style = ST_LEFT + ST_MULTI + ST_UP;
+	lineSpacing = 1;
+	autocomplete = "scripting";
 };
 

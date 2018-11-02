@@ -1,9 +1,12 @@
 //////////////////////////////////////////////////////////////
 //
 // Author: Talya
-// Version: 1.0
+// Version: 1.1
 // Description: Waypoint Editor: Allows player to change last waypoint type.
-// Changelog: None
+// Changelog: 
+// v1.1: 
+//		*Enhanced: Now returns a message if group has no waypoint to be modified.
+//		*Changed: Ares_fnc_showChooseDialog --> Phobos_fnc_showChooseDialog
 //
 //////////////////////////////////////////////////////////////
 
@@ -22,7 +25,7 @@ if (not (isNull _unitUnderCursor)) then {
 			[
 				["Choose Waypoint Type: ", ["MOVE", "DESTROY", "SAD", "GETIN NEAREST", "JOIN", "LEADER", "GETOUT", "CYCLE","LOAD","UNLOAD", "TR UNLOAD", "HOLD", "SENTRY", "GUARD", "TALK", "SCRIPTED", "SUPPORT", "DISMISS", "LOITER"]]
 			]
-		] call ares_fnc_showChooseDialog;
+		] call Phobos_fnc_showChooseDialog;
 		
 		if (count _chatResult > 0) then {
 			_selectedWPType =_chatResult select 0;
@@ -48,10 +51,10 @@ if (not (isNull _unitUnderCursor)) then {
 			case 18: {[_groupOfSelectedUnit,_lastWaypoint] setWaypointType "LOITER";};
 			};
 		}
+	} else {
+		["Selected group does not have active waypoint to modify."] call Ares_fnc_showZeusMessage;
 	}
-}
-	else
-{
+} else {
 	["Module needs to be dropped on an object."] call Ares_fnc_ShowZeusMessage;
 }
 

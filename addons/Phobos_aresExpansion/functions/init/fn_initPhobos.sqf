@@ -1,3 +1,12 @@
+//////////////////////////////////////////////////////////////
+//
+// Author: Talya
+// Version: 1.0
+// Description: Initializes entire mod on mission initialization. (preInit = 1)
+// Changelog: None.
+// Notes:
+//
+//////////////////////////////////////////////////////////////
 
 //Check if dedicated server
 if(!hasInterface) exitWith {["Dedicated Server detected, aborting Phobos initialization."] call Phobos_fnc_LogMessage;};

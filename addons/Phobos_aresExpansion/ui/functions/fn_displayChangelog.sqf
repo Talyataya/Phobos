@@ -10,7 +10,7 @@ _changelog = [] call compile preprocessFileLineNumbers "\Phobos_aresExpansion\fu
 
 _textField ctrlSetStructuredText (parseText _changelog);
 [_textField] call compile preprocessFileLineNumbers "A3\functions_f\gui\fn_ctrlFitToTextHeight.sqf";
-_title ctrlSetStructuredText (parseText "Phobos");
+_title ctrlSetStructuredText (parseText "Phobos Changelog");
 _title ctrlSetBackgroundColor _colorHighlightRGB;
 _textField ctrlCommit 0; 
 _title ctrlCommit 0;

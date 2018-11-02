@@ -1,22 +1,3 @@
-//////////////////////////////////////////////////////////////
-//
-// Author: Talya
-// Version: 1.0
-// Description: Editing selected groups' Engagement Rules.
-// Changelog: None
-//
-//////////////////////////////////////////////////////////////
-
 #include "\Phobos_aresExpansion\module_header.hpp"
-
-if(count Phobos_selectedObjects > 0) then
-{
-	{_x setCombatMode "GREEN";} forEach Phobos_selectedObjects;
-	["Selected groups' combat mode is set to GREEN"] call Ares_fnc_ShowZeusMessage;
-}
-else
-{
-	["No units were selected."] call Ares_fnc_ShowZeusMessage;
-};
-
+["GREEN"] call Phobos_fnc_changeEngagementRules;
 #include "\Phobos_aresExpansion\module_footer.hpp"

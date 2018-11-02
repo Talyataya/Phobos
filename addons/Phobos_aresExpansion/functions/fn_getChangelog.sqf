@@ -5,6 +5,14 @@ _changelog = "<br />";
 _bullet = "<t size='0.5' color='" + _colorHighlightHTML + "'><img image='A3\Ui_f\data\IGUI\RscIngameUI\RscHint\indent_gr' /></t>";
 
 
+_changelog = _changelog + "<t color='" +_colorHighlightHTML+ "'>v0.5.3:</t><br />";
+_changelog = _changelog + _bullet + " <t color='" +_colorHighlightHTML+ "'>Added [BETA]:</t> Phobos Cutscene Editor. Curators are now able to create, save, play and export/import their own cutscenes. Phobos Cutscene editor is a simplification of the complex camera features of Arma 3 and also contains additional features that were seen necessary. Field manual has been expanded for this editor. A complex system lies behind so bugs are expectable. Use at your own risk.<br />";
+_changelog = _changelog + _bullet + " <t color='" +_colorHighlightHTML+ "'>Added:</t> Modules to change stance for multiple units.<br />";
+_changelog = _changelog + _bullet + " <t color='" +_colorHighlightHTML+ "'>Enhanced:</t> ShowChooseDialog has been expanded. A lot of new components were added as well as overall usage has been expanded.<br />";
+_changelog = _changelog + _bullet + " <t color='" +_colorHighlightHTML+ "'>Enhanced:</t> Field-Manual entries are now logically sorted.<br />";
+_changelog = _changelog + _bullet + " <t color='" +_colorHighlightHTML+ "'>Fixed:</t> Minor bugs and cleaner code.<br />";
+
+_changelog = _changelog + "<br /><br />";
 
 _changelog = _changelog + "<t color='" +_colorHighlightHTML+ "'>v0.5.2:</t><br />";
 _changelog = _changelog + _bullet + " <t color='" +_colorHighlightHTML+ "'>Added:</t> Changelog, which will be displayed first time a new version is launched.(Such as now!)<br />";

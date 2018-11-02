@@ -2,12 +2,14 @@
 private ["_currentVersion", "_lastVersionClientUsed"];
 _mainDisplay = _this select 0;
 
+//Check if a function source is provided. If not, shutdown the game.
 if ((!isClass (configfile >> "CfgPatches" >> "Ares")) && (!isClass (configfile >> "CfgPatches" >> "achilles_functions_f_ares"))) exitWith {_mainDisplay createDisplay "shutdownWarning";};
 
+//Check past version of mod. Display welcomeScreen, Changelog depending on last version user used.
 if (!(profileNamespace getVariable ["Phobos_version","0.0.0"] isEqualTo "0.0.0")) then {
-	_currentVersion = getText(configFile >> "cfgPatches" >> "Phobos" >> "versionStr");
+	_currentVersion = getText (configFile >> "cfgPatches" >> "Phobos" >> "versionStr");
 	_lastVersionClientUsed = profileNamespace getVariable "Phobos_version";
-	diag_log "'Phobos: Current version: ' + _currentVersion + ', Last Version user used: ' + _lastVersionClientUsed'";
+	diag_log format ["Phobos: Current version: %1, Last Version user used: %2", _currentVersion, _lastVersionClientUsed];
 	
 	if (_lastVersionClientUsed isEqualTo _currentVersion) then {
 		diag_log "Phobos: Skipping Welcoming Phase.";

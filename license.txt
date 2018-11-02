@@ -8,7 +8,6 @@ Phobos integrates code from the following mods or scripts:
 		
 Phobos includes contributions by the following coders:
 	* Talya
-	* Kex (General indirect assistance)
 	
 Phobos includes contributions by the following closed-beta testers:
 	* Eathox

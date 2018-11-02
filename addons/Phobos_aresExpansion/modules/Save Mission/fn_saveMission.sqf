@@ -1,14 +1,18 @@
 //////////////////////////////////////////////////////////////
 //
 // Author: Talya
-// Version: 1.2
+// Version: 1.3
 // Description: Module to save mission.(Basic Save)
 // Changelog: 
+// v1.3: 
+//		*Changed: Ares_fnc_showChooseDialog --> Phobos_fnc_showChooseDialog
+//		*Enhanced: Time result is reported with less decimals(2) now.
 // v1.2: 
 //		*Removed upcoming features' options. (Reason: Will be readded after features are implemented.)
 //		*Removed option to save non-zeus objects. (Reason: No efficient way to exclude map objects(?))
 // v1.1: 
 // 		*Changed: Does not copy 'MODULEHQ_F' anymore.
+//
 // Notes: Module written from scratch to cover up absents and bugs of Ares save/load module.
 //		*Saves units inside vehicles instead of generating squads from config.
 //		*Fixes multiple vehicle generations(and due that, explosions) caused by squad-bounded vehicle generation.
@@ -17,21 +21,23 @@
 //////////////////////////////////////////////////////////////
 
 #include "\Phobos_aresExpansion\module_header.hpp"
+#define DECIMAL_COUNT 2
 
 ["User initialized the save(basic) module."] call Phobos_fnc_logMessage;
 
 _chatResult =
 ["Create Mission SQF(Basic)",
 	[
-		["Radius:", ["50m","100m","250m","500m","1km","2km","5km","Entire Map"], 7],
+		["Radius:", [["50m","100m","250m","500m","1km","2km","5km","Entire Map"], 7]],
 		["Include Units?", ["Yes","No"]],
 		["Include Objects?", ["Yes","No"]],
 		["Include Empty Vehicles?", ["Yes","No"]],
-		["Include Markers?", ["Yes", "No"], 1]
+		["Include Markers?", [["Yes", "No"], 1]]
 	]
 ] call Phobos_fnc_showChooseDialog;
 
 if(count _chatResult == 0) exitWith {["User aborted save(basic) process."] call Phobos_fnc_logMessage;};
+
 _diagTimeStart = diag_tickTime; 
 _radius = -1;
 switch (_chatResult select 0) do {
@@ -258,7 +264,8 @@ missionNamespace setVariable ['Ares_CopyPaste_Dialog_Text', _text];
 _dialog = createDialog "Ares_CopyPaste_Dialog";
 
 _diagTimeStop = diag_tickTime;
-_processInfo = format ["Generated SQF from (%1 groups, %2 units, %3 occupied vehicles, %4 empty vehicles, %5 objects) in %6s", _totalGroups, _totalUnits, _totalOccupiedVehicles, _totalEmptyVehicles, _totalEmptyObjects, _diagTimeStop - _diagTimeStart];
+_processTime =  [(_diagTimeStop - _diagTimeStart), DECIMAL_COUNT] call Phobos_fnc_roundNumber;
+_processInfo = format ["Generated SQF from (%1 groups, %2 units, %3 occupied vehicles, %4 empty vehicles, %5 objects) in %6s", _totalGroups, _totalUnits, _totalOccupiedVehicles, _totalEmptyVehicles, _totalEmptyObjects, _processTime];
 [_processInfo] call Ares_fnc_showZeusMessage;
 [_processInfo] call Phobos_fnc_logMessage;
 
