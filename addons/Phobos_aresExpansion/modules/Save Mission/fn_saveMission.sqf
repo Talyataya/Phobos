@@ -59,7 +59,7 @@ _includeMarkers = if (_chatResult select 4 == 0) then {true} else {false};
 
 _objectsToSave = [];
 _allZeusObjects = curatorEditableObjects (allCurators select 0);
-_blacklist = Ares_EditableObjectBlackList;
+_blacklist = Phobos_EditableObjectBlackList;
 //Verify the logic below is properly written.
 
 if(_radius != -1) then {
@@ -260,8 +260,8 @@ _text = "";
 	[_x, nil, nil, false] call Phobos_fnc_LogMessage;
 } forEach _output;
 
-missionNamespace setVariable ['Ares_CopyPaste_Dialog_Text', _text];
-_dialog = createDialog "Ares_CopyPaste_Dialog";
+missionNamespace setVariable ['Phobos_CopyPaste_Dialog_Text', _text];
+_dialog = createDialog "Phobos_CopyPaste_Dialog";
 
 _diagTimeStop = diag_tickTime;
 _processTime =  [(_diagTimeStop - _diagTimeStart), DECIMAL_COUNT] call Phobos_fnc_roundNumber;

@@ -293,7 +293,7 @@ _chatResult =
 		["Viewers (Curators): ", _viewers, ["", ""], _code11, false],
 		["Viewers (Players): ", ["RscPropertyOwners_Players"], nil, nil, false],
 		["Cutscene Length: ", "", ["", ""], _code31, false], 
-		["Music: ", ["No Music"], ["", ""], _code41, false], //Array is filled by _code31.
+		["Music: ", ["No Music"], ["", ""], _code41, false], //Array is filled by _code41.
 		["Music Volume: ", [0, musicVolume * 100, 100, 0], ["",""], _code51, false],
 		["Execute Scripts?: ", ["Yes", "No"]]
 	], nil , _onUnload
@@ -344,6 +344,9 @@ private _musicVolume = ((_chatResult select 5) / 100);
 private _execScripts = if (_chatResult select 6 == 0) then {true} else {false};
 
 private _cutsceneCode = [_cutsceneName, false] call Phobos_fnc_cutscenePrepare;
+if (_cutsceneCode isEqualTo -1) then { //May come number or string.
+	["No camera available to create a cutscene. Aborting cutscene play."] call Ares_fnc_showZeusMessage;
+};
 [_spectators, _cutsceneLengthMultiplier, _musicClass, _musicVolume, _execScripts] call (compile _cutsceneCode);
 
 #include "\Phobos_aresExpansion\module_footer.hpp"

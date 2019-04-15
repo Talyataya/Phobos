@@ -4,8 +4,7 @@
 // Version: 1.0
 // Description: Grabs properties of created cameras and generates the SQF and import code of cutscene.(It doesn't start cutscene!)
 // Changelog: None.
-// Notes: Bug: [Extract Mode]Relative objects create new variables, is not compatible with another session. (Fixed, Untested)
-// Pending tests: Bug fix above(Update: Pending) and non-attached object based position calculation fix(Update: Fixed).
+//
 //////////////////////////////////////////////////////////////
 #include "\Phobos_aresExpansion\includes\cinematics.inc"
 #define ID_ERROR_NO_CAMERA_FOUND -1

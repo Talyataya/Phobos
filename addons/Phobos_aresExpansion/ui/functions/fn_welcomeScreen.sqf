@@ -1,10 +1,11 @@
+#include "\Phobos_aresExpansion\includes\uidefines.inc"
 private ["_display","_colorHighlightRGB","_colorHighlightHTML","_bullet","_textField","_title","_message"];
 disableSerialization;
 
 _display = _this select 0; 
 
-_textField = _display displayCtrl 1100;
-_title = _display displayCtrl 1101;
+_textField = _display displayCtrl IDC_WELCOMESCREEN_INFO;
+_title = _display displayCtrl IDC_WELCOMESCREEN_TITLE;
 
 _colorHighlightRGB = ["GUI","BCG_RGB"] call compile preprocessFileLineNumbers "A3\functions_f\gui\fn_displayColorGet.sqf";
 _colorHighlightHTML = _colorHighlightRGB call compile preprocessFileLineNumbers "A3\functions_f\misc\fn_colorRGBtoHTML.sqf";

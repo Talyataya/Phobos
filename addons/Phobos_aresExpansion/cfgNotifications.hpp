@@ -78,3 +78,8 @@ class CutsceneCreationFailed : CamCreationFailed {
 	description = "Cutscene: %1, could not be created. %2";
 };
 
+class CutsceneImportSucceeded : CamCreationSucceeded {
+	title = "CUTSCENE IMPORTED";
+	description = "Cutscene: %1, has been successfully imported.";
+};
+

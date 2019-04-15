@@ -333,6 +333,10 @@ private _musicVolume = ((_chatResult select 4) / 100);
 private _execScripts = if (_chatResult select 5 == 0) then {true} else {false};
 
 private _cutsceneCode = [_cutsceneName, false] call Phobos_fnc_cutscenePrepare;
+//TODO: Not sure if I should do Error Handling like this. This will require me to handle them like this everywhere.
+if (_cutsceneCode isEqualTo -1) exitWith { //May come number or string.
+	["No camera available to create a cutscene. Aborting cutscene preview."] call Ares_fnc_showZeusMessage;
+};
 [_spectators, _cutsceneLengthMultiplier, _musicClass, _musicVolume, _execScripts] call (compile _cutsceneCode);
 
 #include "\Phobos_aresExpansion\module_footer.hpp"

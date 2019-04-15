@@ -1,9 +1,10 @@
+#include "\Phobos_aresExpansion\includes\uidefines.inc"
 private ["_display","_colorHighlightRGB","_textField","_title","_changelog"];
 disableSerialization;
 
 _display = _this select 0;
-_textField = _display displayCtrl 1100;
-_title = _display displayCtrl 1101;
+_textField = _display displayCtrl IDC_CHANGELOG_INFO;
+_title = _display displayCtrl IDC_CHANGELOG_TITLE;
 
 _colorHighlightRGB = ["GUI","BCG_RGB"] call compile preprocessFileLineNumbers "A3\functions_f\gui\fn_displayColorGet.sqf";
 _changelog = [] call compile preprocessFileLineNumbers "\Phobos_aresExpansion\functions\fn_getChangelog.sqf";

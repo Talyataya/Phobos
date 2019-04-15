@@ -43,8 +43,12 @@ if (_extractMethod == 0) then {
 	_cutsceneCode = [_cutsceneName, true] call Phobos_fnc_cutscenePrepare;
 };
 
-missionNamespace setVariable ['Ares_CopyPaste_Dialog_Text', _cutsceneCode];
-createDialog "Ares_CopyPaste_Dialog";
+if (_cutsceneCode isEqualTo -1) exitWith { //It may come number or string.
+	["No camera available to create a cutscene. Aborting cutscene preview."] call Ares_fnc_showZeusMessage;
+};
+
+missionNamespace setVariable ['Phobos_CopyPaste_Dialog_Text', _cutsceneCode];
+createDialog "Phobos_CopyPaste_Dialog";
 
 #include "\Phobos_aresExpansion\module_footer.hpp"
 

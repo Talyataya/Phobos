@@ -4,6 +4,12 @@ _colorHighlightHTML = _colorHighlightRGB call compile preprocessFileLineNumbers 
 _changelog = "<br />";
 _bullet = "<t size='0.5' color='" + _colorHighlightHTML + "'><img image='A3\Ui_f\data\IGUI\RscIngameUI\RscHint\indent_gr' /></t>";
 
+_changelog = _changelog + "<t color='" +_colorHighlightHTML+ "'>v0.5.4:</t><br />";
+_changelog = _changelog + _bullet + " <t color='" +_colorHighlightHTML+ "'>Added:</t> A notification to notify curator when a cutscene is successfully imported.<br />";
+_changelog = _changelog + _bullet + " <t color='" +_colorHighlightHTML+ "'>Fixed:</t> [Achilles Only] Lack of backward-compatibility in Ares files, caused Copy_Paste_Dialog to not work as intended. Phobos now has its own Copy_Paste_Dialog, fixing all code returning modules.<br />";
+_changelog = _changelog + _bullet + " <t color='" +_colorHighlightHTML+ "'>Fixed:</t> Couple of bugs were fixed.<br />";
+
+_changelog = _changelog + "<br /><br />";
 
 _changelog = _changelog + "<t color='" +_colorHighlightHTML+ "'>v0.5.3:</t><br />";
 _changelog = _changelog + _bullet + " <t color='" +_colorHighlightHTML+ "'>Added [BETA]:</t> Phobos Cutscene Editor. Curators are now able to create, save, play and export/import their own cutscenes. Phobos Cutscene editor is a simplification of the complex camera features of Arma 3 and also contains additional features that were seen necessary. Field manual has been expanded for this editor. A complex system lies behind so bugs are expectable. Use at your own risk.<br />";

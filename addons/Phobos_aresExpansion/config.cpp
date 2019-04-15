@@ -6,9 +6,9 @@ class CfgPatches
 		name="Phobos";
 		author[]={"Talya"};
 		url ="";
-		version = 0.5.3;
-		versionStr = "0.5.3";
-		versionAr[] = {0,5,3};
+		version = 0.5.4;
+		versionStr = "0.5.4";
+		versionAr[] = {0,5,4};
 		requiredVersion = 0.1;
 		#include "units.hpp"
 		requiredAddons[] =
@@ -147,6 +147,7 @@ class cfgNotifications
 #include "ui\dynamicDialog.hpp"
 #include "ui\changelogDialog.hpp"
 #include "ui\rscPropertyOwners.hpp"
+#include "ui\copypasteDialog.hpp"
 
 class RscStandardDisplay;
 class RscDisplayMain : RscStandardDisplay

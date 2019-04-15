@@ -5,14 +5,14 @@
 // Description: Functionality for rscPropertyOwners component.
 // Changelog: None.
 // Notes: 
-//		*Designed to work with chooseDialog.sqf.
+//		*Designed to work with showChooseDialog.sqf.
 //		*Cannot handle multiple instances due global variables.	
 //
 //////////////////////////////////////////////////////////////
 
 
-#include "defines.inc"
-
+#include "\Phobos_aresExpansion\includes\uidefines.inc"
+//TODO: Add Phobos_selectedObjects tab.
 _mode = _this select 0;
 _display = _this select 1;
 _isPlayersOnly = _this select 2;
@@ -20,7 +20,7 @@ _isPlayersOnly = _this select 2;
 _tabSide = _display displayCtrl IDC_RSCPROPERTYOWNERS_TABSIDE;
 _tabGroup = _display displayCtrl IDC_RSCPROPERTYOWNERS_TABGROUP;
 _tabUnit = _display displayCtrl IDC_RSCPROPERTYOWNERS_TABUNIT;
-//_tabSelectedUnits = _display displayCtrl ...
+//_tabSelectedUnits = _display displayCtrl ... 
 _iconBlufor = _display displayCtrl IDC_RSCPROPERTYOWNERS_BLUFOR;
 _iconOpfor = _display displayCtrl IDC_RSCPROPERTYOWNERS_OPFOR;
 _iconIndependent = _display displayCtrl IDC_RSCPROPERTYOWNERS_INDEPENDENT;

@@ -1,5 +1,5 @@
-#define CHANGELOG_DIALOG_IDD 340101
+#include "\Phobos_aresExpansion\includes\uidefines.inc"
 
-(findDisplay CHANGELOG_DIALOG_IDD) closeDisplay 0;
+(findDisplay IDD_CHANGELOG_DIALOG) closeDisplay 0;
 profileNamespace setVariable ["Phobos_version",getText(configfile >> "CfgPatches" >> "Phobos" >> "versionStr")];
 saveProfileNamespace;

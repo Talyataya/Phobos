@@ -120,6 +120,7 @@ class RscControlsGroupNoScrollbars;
 class RscControlsGroupNoHScrollbars;
 class RscControlsGroupNoVScrollbars;
 class RscActivePicture;
+class RscTree;
 
 // Custom base classes.
 class RscDynamicDialogSlider : RscSlider { //Obsolete

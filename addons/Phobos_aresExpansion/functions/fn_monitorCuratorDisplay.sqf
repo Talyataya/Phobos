@@ -55,6 +55,7 @@ while {true} do {
 	Phobos_selectedObjects=[];
 	_curatorLogic = getAssignedCuratorLogic player;
 	_curatorLogic addEventHandler ["CuratorObjectSelectionChanged", "if (not (curatorSelected select 0 isEqualTo [] || side (_this select 1) == sideLogic)) then { Phobos_selectedObjects=curatorSelected select 0;}"];
+	//_curatorLogic addEventHandler ["CuratorObjectDoubleClicked", ];
 	
 	[_category] call Phobos_fnc_OnModuleTreeLoad;
 
